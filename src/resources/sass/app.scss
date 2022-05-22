@@ -1,0 +1,71 @@
+$primary: #fc8a7b;
+$secondary: #fcf6cc;
+$success: #71d6c0;
+$light: rgb(255, 244, 243);
+$warning: rgb(255, 233, 179);
+
+//@import '../css/app.css';
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+:root {
+    --first-color: #fc8a7b;
+    --second-color: #fcf6cc;
+    --third-color: #71d6c0;
+    --fourth-color: rgb(255, 244, 243);
+    --fifth-color: rgb(255, 233, 179);
+    --student-font-color: #396b60;
+    --first-font: "Open Sans", sans-serif;
+}
+
+.icon {
+    /*Icono del nav*/
+    width: 20rem;
+}
+
+.navbar-nav {
+    /*Contenedor lista desordenada del nav-2(ul)*/
+    height: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-link:hover {
+    color: var(--first-color);
+    border-top: 0.3rem solid var(--first-color);
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    /*Enlaces de la lista (a)*/
+    color: black;
+    padding: 0.4rem 2rem;
+    border-top: 0.1rem solid black;
+    text-align: center;
+}
+
+.presentation-title {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
+
+@include media-breakpoint-up(lg) {
+    .presentation-title {
+        font-size: 3rem;
+    }
+}
+@include media-breakpoint-up(xl) {
+    .presentation-title {
+        font-size: 4rem;
+    }
+}
+
+.modal-content,
+.btn,
+.form-control {
+    border-radius: 1rem;
+}

@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/home/Home';
+import StudentHome from './components/student/StudentHome';
+import './resources/sass/app.scss';
+import { getAuthToken, getUser } from './services/auth.service';
+
+export const UserContext = createContext(null);
 
 function App() {
+  const [user, setUser] = useState(null)
+
+  async function loadUser() {
+    try {
+      if (getAuthToken() == null) return setUser(null);
+      const res = await getUser();
+      setUser(res.data);
+    } catch (error) {
+      setUser(null);
+    }
+
+  }
+
+  useEffect(() => {
+    loadUser();
+    window.addEventListener('storage', loadUser);
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={user}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/student" element={<StudentHome />} />
+      </Routes>
+    </UserContext.Provider>
   );
 }
 

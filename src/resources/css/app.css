@@ -1,0 +1,45 @@
+:root {
+    --first-color: #fc8a7b;
+    --second-color: #fcf6cc;
+    --third-color: #71d6c0;
+    --fourth-color: rgb(255, 244, 243);
+    --fifth-color: rgb(255, 233, 179);
+    --first-font: "Open Sans", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--first-font);
+}
+
+.icon {
+    /*Icono del nav*/
+    width: 20rem;
+}
+
+.navbar-nav {
+    /*Contenedor lista desordenada del nav-2(ul)*/
+    height: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-link:hover {
+    color: var(--first-color);
+    border-top: 0.3rem solid var(--first-color);
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    /*Enlaces de la lista (a)*/
+    color: black;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-top: 0.1rem solid black;
+
+}
