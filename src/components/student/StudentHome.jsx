@@ -1,8 +1,10 @@
 import React from 'react'
-import StudentNavbar from './StudentNavbar'
+import StudentView from './StudentView'
 
 export default function StudentHome() {
   return (
-    <StudentNavbar />
+    <StudentView>
+      hola
+    </StudentView>
   )
 }
