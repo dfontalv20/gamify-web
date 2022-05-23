@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Spinner } from 'react-bootstrap'
-import cartIcon from '../../resources/img/CarritoDeCompras.PNG'
-import storeTitleIcon from '../../resources/img/TiendaDeRecompensas.PNG'
+import { Spinner } from 'react-bootstrap'
 import { getAll } from '../../services/prize.service'
-import StudentLinks from './StudentLinks'
-import StudentNavbar from './StudentNavbar'
-import StudentPrize from './StudentPrize'
+import StudentPrizeStoreCard from './StudentPrizeStoreCard'
 import StudentView from './StudentView'
 
 export default function StudentPrizeStore() {
@@ -37,7 +33,7 @@ export default function StudentPrizeStore() {
                     :
                     <div className="row row-cols-1 row-cols-lg-3 g-3">
                         {
-                            prizes.map(prize => <div className="col" key={prize.id}><StudentPrize prize={prize} /></div>)
+                            prizes.map(prize => <div className="col" key={prize.id}><StudentPrizeStoreCard prize={prize} /></div>)
                         }
                     </div>
             }

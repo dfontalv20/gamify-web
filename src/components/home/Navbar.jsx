@@ -10,6 +10,11 @@ function Navbar() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const user = useContext(UserContext);
 
+  function handleLogout() {
+    const confirm = window.confirm('¿Esta seguro que desea cerrar sesión?');
+    if (confirm) logout();
+  }
+
   return (
     <header className='container-fluid'>
       <nav className="row">
@@ -24,9 +29,6 @@ function Navbar() {
         <div className="col-12 col-md-7 d-flex">
           <ul className='navbar-nav align-items-center w-100'>
             <li className="nav-item">
-              <NavLink to="/" className="nav-link">Inicio</NavLink>
-            </li>
-            <li className="nav-item">
               {user ?
                 user.student ?
                   <NavLink to="/student" className='nav-link'>Estudiante</NavLink>
@@ -38,7 +40,7 @@ function Navbar() {
             {
               user &&
               <li className="nav-item">
-                <NavLink to="/" className='nav-link' onClick={() => logout()}>Cerrar sesion</NavLink>
+                <NavLink to="/" className='nav-link' onClick={() => handleLogout()}>Cerrar sesion</NavLink>
               </li>
             }
           </ul>
