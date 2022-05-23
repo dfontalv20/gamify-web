@@ -30,20 +30,19 @@ export default function LoginModal({ show, onClose }) {
 
     return (
         <Modal show={show} onHide={handleOnClose}>
-            <ModalHeader closeButton>Iniciar Sesion</ModalHeader>
+            <ModalHeader closeButton></ModalHeader>
             <ModalBody className='text-center'>
                 <Form onSubmit={(e) => handleSubtmit(e)}>
+                    <h2 className='text-center text-success'>ACCEDER</h2>
                     <Form.Group className='mb-3'>
-                        <Form.Label>Usuario</Form.Label>
-                        <Form.Control required type='text' value={username} onChange={(e) => setUsername(e.target.value)} />
+                        <Form.Control placeholder='Usuario' required type='text' value={username} onChange={(e) => setUsername(e.target.value)} />
                     </Form.Group>
                     <Form.Group className='mb-3'>
-                        <Form.Label>Contraseña</Form.Label>
-                        <Form.Control required type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <Form.Control placeholder='Contraseña' required type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
                     </Form.Group>
                     <Form.Label className='text-danger'>{errorMessage}</Form.Label><br />
-                    <Button type='submit' className='mt-3' disabled={loading}>
-                        {loading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : 'Iniciar Sesion'}
+                    <Button type='submit' className='w-100 mt-3' variant='success' disabled={loading}>
+                        {loading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : <strong>Ingresar</strong>}
                     </Button>
                 </Form>
             </ModalBody>

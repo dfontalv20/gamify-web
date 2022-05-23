@@ -1,11 +1,11 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Navigate } from 'react-router-dom'
+import { UserContext } from '../../App'
 
-function PrivateRoute({ path, element, admin = false }) {
-    //si no logeado, echalo pa tras
-    return (
-        <Route path={path} element={element} />
-    )
+function PrivateRoute({ admin = false, children }) {
+    const user = useContext(UserContext)
+    if (!user || (user && user.student && admin)) return <Navigate to='/' />
+    return children
 }
 
 export default PrivateRoute

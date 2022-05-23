@@ -1,7 +1,7 @@
 import { default as axios } from "axios";
 
 const baseURL = `${process.env.REACT_APP_WS_HOST}:${process.env.REACT_APP_WS_PORT}/auth`;
-const tokenKey = 'token';
+export const tokenKey = 'token';
 
 export async function login(credentials) {
     try {

@@ -65,7 +65,18 @@ $warning: rgb(255, 233, 179);
 }
 
 .modal-content,
-.btn,
-.form-control {
+.btn {
     border-radius: 1rem;
+}
+
+.form-control {
+    border-radius: 0;
+    border-width: 0;
+    background-color: ghostwhite;
+    border-bottom: 3px solid $success;
+}
+
+.image-title {
+    border: 0.4rem dotted $primary;
+    border-radius: 3rem;
 }
