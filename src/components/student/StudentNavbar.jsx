@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../App'
 import studentIcon from '../../resources/img/IconoEstudiante.PNG'
-import StudentLinks from './StudentLinks';
 
 export default function StudentNavbar() {
     const user = useContext(UserContext);
@@ -21,8 +20,8 @@ export default function StudentNavbar() {
                 </div>
                 <div className="col d-flex justify-content-center">
                     <label className='fs-3 text-center' style={{ color: 'var(--student-font-color)' }}>{user?.name.toUpperCase() ?? '-'}</label>
-                    <div className='p-1 bg-warning fs-5 position-absolute top-100 start-75 translate-middle'>
-                        <label>{`$ECoins ${user?.student.ecoins}`}</label>
+                    <div className='p-1 lh-1 bg-warning position-absolute top-100 start-75' style={{transform: 'translate(150%, -50%)', fontSize: '1.1rem'}}>
+                        <label>{`$EC${user?.student.ecoins}`}</label>
                     </div>
                 </div>
             </nav>
