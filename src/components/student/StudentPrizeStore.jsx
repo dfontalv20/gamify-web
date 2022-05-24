@@ -14,7 +14,6 @@ export default function StudentPrizeStore() {
             const res = await getAll();
             setPrizes(res.data)
         } catch (error) {
-            console.log(error);
         } finally {
             setLoading(false);
         }
@@ -31,7 +30,7 @@ export default function StudentPrizeStore() {
                 loading ?
                     <center><Spinner variant='primary' /></center>
                     :
-                    <div className="row row-cols-1 row-cols-lg-3 g-3">
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
                         {
                             prizes.map(prize => <div className="col" key={prize.id}><StudentPrizeStoreCard prize={prize} /></div>)
                         }
