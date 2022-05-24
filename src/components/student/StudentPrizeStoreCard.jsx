@@ -16,7 +16,6 @@ export default function StudentPrizeStoreCard({ prize }) {
                     alert('Premio comprado');
                 }
             } catch (error) {
-                console.log(error);
                 alert(error.response.data.message ?? 'Error al comprar el premio');
             }
         }
