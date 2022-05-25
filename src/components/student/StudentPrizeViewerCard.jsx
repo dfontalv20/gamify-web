@@ -7,8 +7,8 @@ export default function StudentPrizeViewerCard({ prize }) {
                 <div className="col-2 d-flex fs-2">
                     {
                         prize.confirmed ?
-                            <i className="bi bi-check-circle-fill m-auto" title='Pendiente por confirmación'></i> :
-                            <i className="bi bi-clock m-auto" title='Confirmado'></i>
+                            <i className="bi bi-check-circle-fill m-auto" title='Confirmado'></i> :
+                            <i className="bi bi-clock m-auto" title='Pendiente por confirmación'></i>
                     }
                 </div>
                 <div className="col-8 px-0">

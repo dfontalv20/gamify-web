@@ -12,6 +12,9 @@ export default function AdminLinks() {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/admin/students">Estudiantes</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/admin/companies">Equipos</NavLink>
+                    </li>
                 </ul>
             </div>
         </div>

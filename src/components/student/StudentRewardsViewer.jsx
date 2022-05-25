@@ -1,5 +1,4 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
 import StudentRewardsViewerCard from './StudentRewardsViewerCard'
 
 export default function StudentRewardsViewer({ rewards }) {
