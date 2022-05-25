@@ -33,7 +33,7 @@ function Navbar() {
                 user.student ?
                   <NavLink to="/student" className='nav-link'>Estudiante</NavLink>
                   :
-                  <NavLink to="/" className='nav-link'>Administrador</NavLink>
+                  <NavLink to="/admin" className='nav-link'>Administrador</NavLink>
                 :
                 <NavLink to="/" className='nav-link' onClick={() => setShowLoginModal(true)}>Acceder</NavLink>}
             </li>

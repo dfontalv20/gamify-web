@@ -10,7 +10,7 @@ export default function StudentView({ children }) {
       <Container className='bg-white py-3'>
         <div className='py-2'><StudentLinks /></div>
         <div className='w-100 px-2 px-lg-5'>
-          {children}
+          {children ?? <></>}
         </div>
       </Container>
     </div>

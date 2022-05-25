@@ -2,12 +2,13 @@ $primary: #fc8a7b;
 $secondary: #fcf6cc;
 $success: #71d6c0;
 $light: rgb(255, 244, 243);
-$warning: rgb(255, 233, 179);
+$warning: #ffde8d;
 
 //@import '../css/app.css';
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
 
 :root {
     --first-color: #fc8a7b;
@@ -16,6 +17,7 @@ $warning: rgb(255, 233, 179);
     --fourth-color: rgb(255, 244, 243);
     --fifth-color: rgb(255, 233, 179);
     --student-font-color: #396b60;
+    --admin-font-color: #908a64;
     --first-font: "Open Sans", sans-serif;
 }
 

@@ -4,7 +4,7 @@ export default function StudentPrizeViewerCard({ prize }) {
     return (
         <div className='card shadow'>
             <div className="row px-3">
-            <div className="col-2 d-flex align-items-center justify-content-start">
+                <div className="col-2 d-flex align-items-center justify-content-start">
                     {
                         prize.confirmed ?
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-check-circle-fill" viewBox="0 0 16 16">
