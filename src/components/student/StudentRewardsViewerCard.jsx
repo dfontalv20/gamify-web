@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function StudentRewardsViewerCard({ reward }) {
     return (
-        <div className='card shadow'>
-            <div className="row px-3">
+        <div className='card p-3 shadow'>
+            <div className="row">
                 <div className="col-8">
                     <strong>{reward.reward.name}</strong><br />
                     <label className='text-muted'>{(new Date(reward.createdAt)).toLocaleDateString()}</label>
